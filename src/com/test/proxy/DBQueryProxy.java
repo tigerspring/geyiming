@@ -11,6 +11,7 @@ public class DBQueryProxy implements IDBQuery {
 	
 	@Override
 	public String request() {
+		//懒加载代码块儿,用到request请求时DBQuery才会进行加载
 		if(realQuery == null){
 			realQuery = new DBQuery();
 		}
