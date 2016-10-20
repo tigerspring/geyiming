@@ -18,7 +18,7 @@ public class CglibDbQueryInterceptor implements MethodInterceptor{
 		if(real == null){
 			real = new DBQuery();
 		}
-		return real.request();
+		return real.request(); 
 	}
 	
 	public static IDBQuery createCglibProxy(){
